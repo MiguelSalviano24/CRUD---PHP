@@ -31,10 +31,32 @@
                                 <a href="index.php" class="btn btn-danger float-ends">Voltar</a>
                             </h4>
                         </div>
+                        <div class="card-body">
+                            <form action="" method="POST">
+                                <div class="mb-3">
+                                    <label>Nome</label>
+                                    <input type="text" name="nome" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Data de nascimento</label>
+                                    <input type="date" name="data_nascimento" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Senha</label>
+                                    <input type="password" name="nome" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <button type="submit" name="create-usuario" class="btn btn-primary">Salvar </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     <footer>
