@@ -50,8 +50,7 @@
                                         <td>09/01/2001</td>
                                         <td>
                                             <a href="" class="btn btn-secondary btn-sm">Visualizar</a>
-                                            </form>
-                                        </td>
+                                            <a href="" class="btn btn-success btn-sm">Editar</a>
                                     </tr>
                                 </tbody>
                             </table>
