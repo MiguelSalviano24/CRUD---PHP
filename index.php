@@ -50,19 +50,31 @@ session_start();
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>teste</td>
-                                        <td>teste@email.com</td>
-                                        <td>09/01/2001</td>
-                                        <td>
-                                            <a href="" class="btn btn-secondary btn-sm">Visualizar</a>
-                                            <a href="" class="btn btn-success btn-sm">Editar</a>
-                                            <form action="" method="POST" class="d-inline">
-                                                <button type="submit" name="delete_users" value="1" class="btn btn-danger btn-sm">Excluir</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    $sql = 'SELECT * FROM usuarios';
+                                    $usuarios = mysqli_query($soyedinyat, $sql);
+                                    if (mysqli_num_rows($usuarios) > 0) {
+                                        foreach ($usuarios as $usuario) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $usuario['id'] ?></td>
+                                                <td><?= $usuario['nome'] ?></td>
+                                                <td><?= $usuario['email'] ?></td>
+                                                <td><?= date('d/m/Y', strtotime($usuario['data_nascimento'])) ?></td>
+                                                <td>
+                                                    <a href="" class="btn btn-secondary btn-sm">Visualizar</a>
+                                                    <a href="" class="btn btn-success btn-sm">Editar</a>
+                                                    <form action="" method="POST" class="d-inline">
+                                                        <button type="submit" name="delete_users" value="1" class="btn btn-danger btn-sm">Excluir</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                    <?php
+                                        }
+                                    } else {
+                                        echo '<h5>Nenhum usuário encontrado</h5>';
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
