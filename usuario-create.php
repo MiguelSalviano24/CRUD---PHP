@@ -28,11 +28,11 @@
                     <div class="card">
                         <div class="card-header">
                             <h4>Adicionar usuário
-                                <a href="index.php" class="btn btn-danger float-ends">Voltar</a>
+                                <a href="index.php" class="btn btn-danger float-end">Voltar</a>
                             </h4>
                         </div>
                         <div class="card-body">
-                            <form action="" method="POST">
+                            <form action="acoes.php" method="POST">
                                 <div class="mb-3">
                                     <label>Nome</label>
                                     <input type="text" name="nome" class="form-control">
@@ -47,10 +47,10 @@
                                 </div>
                                 <div class="mb-3">
                                     <label>Senha</label>
-                                    <input type="password" name="nome" class="form-control">
+                                    <input type="password" name="senha" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" name="create-usuario" class="btn btn-primary">Salvar </button>
+                                    <button type="submit" name="create_usuario" class="btn btn-primary">Salvar</button>
                                 </div>
                             </form>
                         </div>
