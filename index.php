@@ -1,5 +1,6 @@
 <?php
 require 'conexao.php';
+session_start();
 
 ?>
 
@@ -28,6 +29,7 @@ require 'conexao.php';
     </header>
     <main>
         <div class="container mt-4">
+            <?php include('mensagem.php') ?>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
