@@ -51,6 +51,10 @@
                                         <td>
                                             <a href="" class="btn btn-secondary btn-sm">Visualizar</a>
                                             <a href="" class="btn btn-success btn-sm">Editar</a>
+                                            <form action="" method="POST" class="d-inline">
+                                                <button type="submit" name="delete_users" value="1" class="btn btn-danger btn-sm">Excluir</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
