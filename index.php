@@ -22,6 +22,19 @@
         <?php include('navbar.php'); ?>
     </header>
     <main>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4> Lista de usuários
+                                <a href="usuario-create.php" class="btn btn-primary float-end">Adicionar usuário</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
     <footer>
