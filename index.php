@@ -5,10 +5,10 @@ session_start();
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <title>Title</title>
+    <title>Usuários</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -62,7 +62,7 @@ session_start();
                                                 <td><?= $usuario['email'] ?></td>
                                                 <td><?= date('d/m/Y', strtotime($usuario['data_nascimento'])) ?></td>
                                                 <td>
-                                                    <a href="usuario-view.php?id=<?= $usuario['id'] ?>" class="btn btn-secondary btn-sm">Visualizar</a>
+                                                    <a href="usuario-view.php?id=<?= $usuario['id'] ?>" class="btn btn-primary btn-sm float-center">Visualizar</a>
                                                     <a href="usuario-edit.php?id=<?= $usuario['id'] ?>" class="btn btn-success btn-sm">Editar</a>
                                                     <form action="acoes.php" method="POST" class="d-inline">
                                                         <button onclick="return confirm('Tem certeza que deseja excluir?')" type="submit" name="delete_usuario" value="<?= $usuario['id'] ?>" class="btn btn-danger btn-sm">Excluir</button>

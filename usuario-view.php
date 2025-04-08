@@ -4,7 +4,7 @@ require 'conexao.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <title>Usuário visualizar</title>
