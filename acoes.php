@@ -23,7 +23,6 @@ if (isset($_POST['create_usuario'])) {
     }
 }
 
-
 if (isset($_POST['update_usuario'])) {
     $usuario_id = mysqli_real_escape_string($soyedinyat, $_POST['usuario_id']);
 
@@ -48,6 +47,24 @@ if (isset($_POST['update_usuario'])) {
         exit;
     } else {
         $_SESSION['mensagem'] = 'Usuário não foi atualizado';
+        header('Location: index.php');
+        exit;
+    }
+}
+
+if (isset($_POST['delete_usuario'])) {
+    $usuario_id = mysqli_real_escape_string($soyedinyat, $_POST['delete_usuario']);
+
+    $sql = "DELETE FROM usuarios WHERE id = '$usuario_id'";
+
+    mysqli_query($soyedinyat, $sql);
+
+    if (mysqli_affected_rows($soyedinyat) > 0) {
+        $_SESSION['mensagem'] = 'Usuário deletado com sucesso';
+        header('Location: index.php');
+        exit;
+    } else {
+        $_SESSION['mensagem'] = 'Usuário não foi deletado';
         header('Location: index.php');
         exit;
     }

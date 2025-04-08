@@ -64,8 +64,8 @@ session_start();
                                                 <td>
                                                     <a href="usuario-view.php?id=<?= $usuario['id'] ?>" class="btn btn-secondary btn-sm">Visualizar</a>
                                                     <a href="usuario-edit.php?id=<?= $usuario['id'] ?>" class="btn btn-success btn-sm">Editar</a>
-                                                    <form action="" method="POST" class="d-inline">
-                                                        <button type="submit" name="delete_users" value="1" class="btn btn-danger btn-sm">Excluir</button>
+                                                    <form action="acoes.php" method="POST" class="d-inline">
+                                                        <button onclick="return confirm('Tem certeza que deseja excluir?')" type="submit" name="delete_usuario" value="<?= $usuario['id'] ?>" class="btn btn-danger btn-sm">Excluir</button>
                                                     </form>
                                                 </td>
                                             </tr>
